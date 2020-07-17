@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
-Pollutants <- readRDS("summarySCC_PM25.rds")
-Sources <- readRDS("Source_Classification_Code.rds")
+Pollutants <- readRDS("PM25.rds")
+Sources <- readRDS("Source.rds")
 
 baltimore_yearly_total_emmisions <- Pollutants %>% subset(fips == '24510') %>% group_by(year) %>% summarise(total_emmisions = sum(Emissions, na.rm = TRUE))
 

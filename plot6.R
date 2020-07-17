@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
-Pollutants <- readRDS("summarySCC_PM25.rds")
-Sources <- readRDS("Source_Classification_Code.rds")
+Pollutants <- readRDS("PM25.rds")
+Sources <- readRDS("Source.rds")
 
 vehicle_emmisions <- Sources[grep("[Vv]ehicle", Sources$Short.Name),]
 

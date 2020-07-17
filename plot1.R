@@ -1,7 +1,7 @@
 library(dplyr)
 library(ggplot2)
-Pollutants <- readRDS("summarySCC_PM25.rds")
-Sources <- readRDS("Source_Classification_Code.rds")
+Pollutants <- readRDS("PM25.rds")
+Sources <- readRDS("Source.rds")
 
 by_year_total_emmisions <- Pollutants %>% group_by(year) %>% summarise(total_emmisions = sum(Emissions, na.rm = TRUE))
 
